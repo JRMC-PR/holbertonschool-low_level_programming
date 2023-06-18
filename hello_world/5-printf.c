@@ -2,7 +2,7 @@
 /**
  *main- Execute
  *printf- Print the messae to stdout
- *reurn 0- indicates success aslong as it is 0 
+ *return- 0 indicates success aslong as it is 0
  *
  */
 int main(void)
