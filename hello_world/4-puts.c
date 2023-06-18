@@ -3,14 +3,14 @@
 int main(void)
 {
 /*
- *The main fuction will execute 
+ *The main fuction will execute
  *everything inside the {}
  *
- *and return a 0 if everythign is ok 
+ *and return a 0 if everythign is ok
  *
- *cahr output hilds the output string 
+ *cahr output hilds the output string
  *
- * */
+ */
 	char output[] = "\"Programming is like building a multilingual puzzle";
 
 	puts(output);
