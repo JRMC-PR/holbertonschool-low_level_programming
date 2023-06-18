@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
- *Main: Executes the program
+ *main: Executes the program
  *
  *Return: if ok is 0
  */
