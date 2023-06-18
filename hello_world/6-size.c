@@ -8,11 +8,11 @@ int main(void)
 	long long int w;
 	float o;
 
-	printf("The byte size of a char is:%d byte(s).\n",sizeof(c));
-	printf("The byte size of a int is:%d btyte(s).\n",sizeof(i));
-	printf("The byte size of a long int is:%d byte(s).\n",sizeof(r));
-	printf("The byte size of a long long int is:%d byte(s).\n",sizeof(w));
-	printf("The byte size of a flot is:%d byte(s).\n",sizeof(o));
+	printf("Size of a char : %d byte(s).\n",sizeof(c));
+	printf("Size of an int : %d btyte(s).\n",sizeof(i));
+	printf("Size of a long int : %d byte(s).\n",sizeof(r));
+	printf("Size of a long long int : %d byte(s).\n",sizeof(w));
+	printf("Size of a float : %d byte(s).\n",sizeof(o));
 
 	return (0);
 }
