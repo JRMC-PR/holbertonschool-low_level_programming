@@ -1,8 +1,8 @@
 #include <stdio.h>
 /*
- *main: Executes the program
+ *main -Entry point
  *
- *Return: if ok is 0
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
