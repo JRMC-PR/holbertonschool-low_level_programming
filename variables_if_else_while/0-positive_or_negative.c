@@ -6,7 +6,7 @@
 /**
  *main- Execute
  *Return: 0 means success
- *
+ * if statement will handel the decition making
  *
  *
  */
