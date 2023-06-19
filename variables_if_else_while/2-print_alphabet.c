@@ -14,7 +14,7 @@ int main(void)
 
 	for(i=97;i <= 122; i++)
 	{
-		a = i + '0'
+		a = i + '0';
 		putchar(a);
 	}
 
