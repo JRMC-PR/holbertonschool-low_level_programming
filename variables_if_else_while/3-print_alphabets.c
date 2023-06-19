@@ -15,6 +15,8 @@ int main(void)
 	for (A = 'A'; A < 'Z' ; A++)
 		puthcar(A);
 
+	putchar('\n');
+
 	return (0);
 
 }
