@@ -1,4 +1,4 @@
-#include <stido.h>
+#include <stdio.h>
 /**
  *main- Execute
  *Return: if 0 success
