@@ -13,8 +13,9 @@
 
 int main(void)
 {
+	
 	int i, lnt;
-	char string[] = " _putchar" ;
+	char string[] = "_putchar" ;
 
 	lnt = sizeof(string);
 	
