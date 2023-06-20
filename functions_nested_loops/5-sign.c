@@ -4,6 +4,7 @@
 /**
  *print_sign- evaluate the function
  *@n: stores number value to bess passed
+ *Return: 1 or 0
  */
 int print_sign(int n)
 {
@@ -14,7 +15,7 @@ int print_sign(int n)
 	}
 	else if (n == 0)
 	{
-		_putchat(48);
+		_putchar(48);
 		return (0);
 	}
 	else
