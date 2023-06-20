@@ -13,15 +13,15 @@
 
 int main(void)
 {
-	
+
 	int i, lnt;
-	char string[] = "_putchar" ;
+	char string[] = "_putchar";
 
 	lnt = sizeof(string);
-	
+
 	for (i = 0; i < lnt ; i++)
 		_putchar(string[i]);
-	
+
 	_putchar('\n');
 
 
