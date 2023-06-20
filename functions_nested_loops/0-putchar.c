@@ -1,5 +1,6 @@
+#include <unistd.h>
 #include <stdio.h>
-#inlcude <unistd.h>
+#include "main.h"
 /**
  *main- Execute the code in between {}
  *Return: 0 if succesful
@@ -8,7 +9,6 @@
  */
 
 /*Function signature*/
-int _putchar(char c);
 
 int main(void)
 {
