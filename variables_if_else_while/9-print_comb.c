@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-	int i;
-	
+	int i, b;
+	b = 44;
 
 	for (i = 48; i < 58 ; i++)
 	{
 		putchar(i);
-		putchar(',\t');
+		putchar(b'\t');
 	}
 
 	return (0);
