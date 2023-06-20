@@ -11,7 +11,7 @@ int mani(void)
 	char a;
 
 	for (i = 48 ; i <58 ; i++)
-		putchat(i);
+		putchar(i);
 
 	for (a = 'a' ; a <= 'f' ; a++)
 		putchar(a);
