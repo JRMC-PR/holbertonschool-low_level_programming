@@ -14,7 +14,7 @@ int print_sign(int n)
 	}
 	else if (n == 0)
 	{
-		printf("%d", n);
+		printf("%d\b", n);
 		return (0);
 	}
 	else
