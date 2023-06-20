@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main- Execute 
+ *main- Execute
  *Return: 0 id success
  *
  *
