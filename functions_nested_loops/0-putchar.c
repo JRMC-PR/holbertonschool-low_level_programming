@@ -12,15 +12,22 @@
 
 int main(void)
 {
-	char string = "_putchar";
+	int i, lnt;
+	char string[] = " _putchar" ;
 
-	_putchar(string);
+	lnt = strlen(string);
+	
+	for (i = 0; i < lnt ; i++)
+		_putchar(string[i]);
+
 
 	return (0);
 }
 
+/*Functions Sections*/
 int _putchar(char c)
 {
+
 	return (write(1, &c, 1));
 }
 
