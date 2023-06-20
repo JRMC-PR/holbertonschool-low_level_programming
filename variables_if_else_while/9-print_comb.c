@@ -16,10 +16,9 @@ int main(void)
 		putchar(i);
 
 		if (i != 57)
-		{
 			putchar(b);
-			putchar(' ');
-		}
+
+		putchar(' ');
 	}
 
 	return (0);
