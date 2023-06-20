@@ -9,17 +9,17 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		putchar(43);
+		_putchar(43);
 		return (1);
 	}
 	else if (n == 0)
 	{
-		printf("%d", n);
+		_putchat(48);
 		return (0);
 	}
 	else
 	{
-		putchar(45);
+		_putchar(45);
 		return (-1);
 	}
 }
