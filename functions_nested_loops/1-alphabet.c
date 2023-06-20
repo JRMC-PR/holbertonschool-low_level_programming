@@ -5,7 +5,7 @@
  *Return: 0 ia success
  *
  */
-int main(void)
+void print_alphabet(void)
 {
 	int i;
 
