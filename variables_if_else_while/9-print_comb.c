@@ -9,8 +9,9 @@ int main(void)
 {
 	int i, b;
 
+	/*ASCII value for ","*/
 	b = 44;
-
+	/*The for will print numbers 0-9 folloed by a coman and s space*/
 	for (i = 48; i <= 57 ; i++)
 	{
 		putchar(i);
