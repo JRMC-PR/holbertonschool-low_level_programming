@@ -13,7 +13,8 @@ int main(void)
 	for (i = 48; i < 58 ; i++)
 	{
 		putchar(i);
-		putchar(b'\t');
+		putchar(b);
+		putchar('\t');
 	}
 
 	return (0);
