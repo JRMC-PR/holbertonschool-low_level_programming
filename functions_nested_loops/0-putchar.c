@@ -19,7 +19,7 @@ int main(void)
 
 	lnt = sizeof(string);
 
-	for (i = 0; i <= lnt ; i++)
+	for (i = 0; i < lnt-1 ; i++)
 		_putchar(string[i]);
 
 	_putchar('\n');
