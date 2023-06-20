@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include "main.h"
+#include <string.h>
 /**
  *main- Execute the code in between {}
  *Return: 0 if succesful
