@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *main- Execute
+ *print_alphabet- Execute
  *Return: 0 ia success
  *
  */
