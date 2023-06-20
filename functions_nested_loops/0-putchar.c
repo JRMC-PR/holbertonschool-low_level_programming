@@ -21,15 +21,10 @@ int main(void)
 	
 	for (i = 0; i < lnt ; i++)
 		_putchar(string[i]);
+	
+	_putchar('\n');
 
 
 	return (0);
-}
-
-/*Functions Sections*/
-int _putchar(char c)
-{
-
-	return (write(1, &c, 1));
 }
 
