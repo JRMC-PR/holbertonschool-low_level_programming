@@ -28,13 +28,15 @@ void jack_bauer(void)
 				{
 					_putchar(48);
 					_putchar(abs(m) + '0');
+					_putch('\n');
 				}
 				else
 				{
 					F = m / 10;
 					L = m % 10;
-				_putchar(F + '0');
-				_putchar(L + '0');
+					_putchar(F + '0');
+					_putchar(L + '0');
+					_putch('\n');
 				}
 			}
 			else
@@ -42,9 +44,9 @@ void jack_bauer(void)
 				_putchar(F +'0');
 				_putchar(L + '0');
 				_putchar(58);
+				_putch('\n');
 
 			}
-		}
-		_putchar('\n');
+		};
 	}
 }
