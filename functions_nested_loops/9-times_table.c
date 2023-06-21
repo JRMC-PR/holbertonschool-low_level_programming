@@ -13,7 +13,7 @@ void times_table(void)
 	{
 		for (c = 0 ; c < 10 ; c++)
 		{
-			_putchar((r * a ) + '0');
+			_putchar((r * c ) + '0');
 			_putchar(44);
 			_putchar(' ');
 			_putchar(' ');
