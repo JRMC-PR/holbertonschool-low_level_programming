@@ -19,12 +19,13 @@ void times_table(void)
 			}
 			else
 			{
-				F = (r * c) /10;
+				F = (r * c) / 10;
 				L = (r * c) % 10;
 				_putchar(F + '0');
 				_putchar(L + '0');
 
 			}
+			if (c <= 8)
 			_putchar(44);
 			_putchar(' ');
 			_putchar(' ');
