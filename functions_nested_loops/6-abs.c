@@ -6,10 +6,8 @@
  *_abs- evaluate function
  *Retunr: 0 if success
  */
-int _abs(int)
+int _abs(int n)
 {
-	int n;
-
 	n = abs(n);
 
 	return (0);
