@@ -23,7 +23,6 @@ void jack_bauer(void)
 				_putchar(48);
 				_putchar(abs(h) + '0');
 				_putchar(58);
-				_putchar(48);
 				if ( m < 10 )
 				{
 					_putchar(48);
