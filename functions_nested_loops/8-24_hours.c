@@ -36,7 +36,7 @@ void jack_bauer(void)
 					L = m % 10;
 					_putchar(F + '0');
 					_putchar(L + '0');
-					_putch('\n');
+					_putchar('\n');
 				}
 			}
 			else
@@ -44,7 +44,7 @@ void jack_bauer(void)
 				_putchar(F +'0');
 				_putchar(L + '0');
 				_putchar(58);
-				_putch('\n');
+				_putchar('\n');
 
 			}
 		};
