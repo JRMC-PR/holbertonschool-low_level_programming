@@ -8,7 +8,7 @@
 void jack_bauer(void)
 {
 	int h, m, F, L, Fm, Lm;
-	 for (h = 0 ; h < 24 : h++)
+	 for (h = 0 ; h < 24 ; h++)
 	 {
 		 for (m = 0 ; m < 60 ; m++)
 		 {
@@ -17,11 +17,11 @@ void jack_bauer(void)
 			 Fm = m / 10;
 			 Lm = m % 10;
 
-			_putcahr(F + '0');
-			_putcahr(L + '0');
-			_putcahr(58);
-			_putcahr(Fm + '0');
-			_putcahr(lm + '0');
+			_putchar(F + '0');
+			_putchar(L + '0');
+			_putchar(58);
+			_putchar(Fm + '0');
+			_putchar(lm + '0');
 		 }
 		 _putchar('\n');
 	 }
