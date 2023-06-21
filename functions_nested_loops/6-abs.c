@@ -4,7 +4,7 @@
 #include <stdlib.h>
 /**
  *_abs- evaluate function
- *Retunr: return te value of n
+ *Return: return te value of n
  *@n: hold the value of an int
  */
 int _abs(int n)
