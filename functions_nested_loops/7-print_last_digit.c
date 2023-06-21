@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
 /**
  *print_last_digit- run the function
  *Return: the value of the last digit
