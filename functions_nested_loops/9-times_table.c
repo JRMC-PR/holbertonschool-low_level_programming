@@ -23,7 +23,7 @@ void times_table(void)
 		_putchar('\n');
 	}
 }
-int rest_space(int c)
+int rest_space(int r,int c)
 {
 if (c < 9)
 			{
