@@ -1,4 +1,4 @@
-#include <stido.c>
+#include <stido.h>
 #include "main.h"
 /**
  *
