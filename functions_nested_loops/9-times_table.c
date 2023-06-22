@@ -18,10 +18,14 @@ void times_table(void)
 				_putchar((r * c) / 10 + '0');
 				_putchar((r * c) % 10 + '0');
 			} else
-				{
-					_putchar((r * c) + '0');
-				}
-			if (c < 9)
+				_putchar((r * c) + '0');
+		}
+		_putchar('\n');
+	}
+}
+int rest_space(int c)
+{
+if (c < 9)
 			{
 				_putchar(44);
 				if ((r * c) <= 9)
@@ -30,11 +34,7 @@ void times_table(void)
 					_putchar(' ');
 				}
 				else
-				{
 					_putchar(' ');
-				}
 			}
-		}
-			_putchar('\n');
-	}
+return (0);
 }
