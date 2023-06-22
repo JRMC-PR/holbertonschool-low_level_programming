@@ -29,16 +29,22 @@ void times_table(void)
 
 int ret_space(int r,int c)
 {
-if (c < 9)
-			{
-				_putchar(44);
-				if ((r * c) <= 9)
-				{
-					_putchar(' ');
-					_putchar(' ');
-				}
-				else
-					_putchar(' ');
-			}
-return (0);
+	if (c < 9)
+	{
+		_putchar(44);
+		if ((r * c) <= 9)
+		{
+			_putchar(' ');
+			_putchar(' ');
+		}
+		else
+			_putchar(' ');
+	}
+	else
+	{
+		_putchar(' ');
+		_putchar(' ');
+
+	}
+	return (0);
 }
