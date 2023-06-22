@@ -27,9 +27,9 @@ void times_table(void)
 			}
 			if (c <= 8)
 			_putchar(44);
-			/*_putchar(' ');*/
+			_putchar(' ')
 
-			if ((r * c) < 10)
+			if ((r * c) > 10)
 			_putchar(' ');
 		}
 		_putchar('\n');
