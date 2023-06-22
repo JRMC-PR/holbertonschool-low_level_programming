@@ -18,11 +18,15 @@ void times_table(void)
 				_putchar((r * c) / 10 + '0');
 				_putchar((r * c) % 10 + '0');
 			} else
+			{
 				_putchar((r * c) + '0');
+			}
+			rest_space(r,c);
 		}
 		_putchar('\n');
 	}
 }
+
 int rest_space(int r,int c)
 {
 if (c < 9)
