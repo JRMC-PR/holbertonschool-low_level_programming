@@ -16,6 +16,9 @@ void times_table(void)
 			if ((r * c) < 10)
 			{
 				_putchar((r * c) + '0');
+				_putchar(44);
+				_putchar(' ');
+				_putchar(' ');
 			}
 			else
 			{
@@ -23,17 +26,6 @@ void times_table(void)
 				L = (r * c) % 10;
 				_putchar(F + '0');
 				_putchar(L + '0');
-
-			}
-
-			if ((r * c) < 10)
-			{
-				_putchar(44);
-				_putchar(' ');
-				_putchar(' ');
-			}
-			else
-			{
 				_putchar(44);
 				_putchar(' ');
 			}
