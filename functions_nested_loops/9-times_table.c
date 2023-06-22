@@ -21,13 +21,13 @@ void times_table(void)
 			{
 				_putchar((r * c) + '0');
 			}
-			ret_space(r,c);
+			ret_space(r, c);
 		}
 		_putchar('\n');
 	}
 }
 
-int ret_space(int r,int c)
+int ret_space(int r, int c)
 {
 	if (c < 9)
 	{
