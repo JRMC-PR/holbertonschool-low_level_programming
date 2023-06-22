@@ -13,11 +13,10 @@ void times_table(void)
 	{
 		for (c = 0 ; c < 10 ; c++)
 		{
-			if ((r * c) < 10)
+			if ((r * c) >= 10)
 			{
 				_putchar((r * c) + '0');
 				_putchar(44);
-				_putchar(' ');
 				_putchar(' ');
 			}
 			else
@@ -27,6 +26,7 @@ void times_table(void)
 				_putchar(F + '0');
 				_putchar(L + '0');
 				_putchar(44);
+				_putchar(' ');
 				_putchar(' ');
 			}
 		}
