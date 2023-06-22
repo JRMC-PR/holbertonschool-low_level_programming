@@ -31,24 +31,9 @@ void times_table(void)
 				_putchar(' ');
 				_putchar((r * c) + '0');
 			}
-			/*ret_space(r, c);*/
 		}
 		_putchar('\n');
 	}
 }
 
-/*int ret_space(int r, int c)
-  {
-  if (c < 9)
-  {
-  _putchar(44);
-  }
-  if ((r * c) <= 9)
-  {
-  _putchar(' ');
-  _putchar(' ');
-  }
-  else
-  _putchar(' ');
-  return (0);
-  }*/
+
