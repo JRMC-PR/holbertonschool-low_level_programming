@@ -27,7 +27,7 @@ void times_table(void)
 	}
 }
 
-int rest_space(int r,int c)
+int ret_space(int r,int c)
 {
 if (c < 9)
 			{
