@@ -19,17 +19,14 @@ void times_table(void)
 				_putchar((r * c) % 10 + '0');
 				_putchar(44);
 				_putchar(' ');
-			}else 
-			{
-				_putchar((r * c) + '0');
-				_putchar(44);
-				_putchar(' ');
-				_putchar(' ');
-			}
-
-			_putchar('\n');
-			
-			
+			} else
+				{
+					_putchar((r * c) + '0');
+					_putchar(44);
+					_putchar(' ');
+					_putchar(' ');
+				}
 		}
+			_putchar('\n');
 	}
 }
