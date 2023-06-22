@@ -25,14 +25,18 @@ void times_table(void)
 				_putchar(L + '0');
 
 			}
-			if (c < 9)
+
+			if ((r * c) < 10)
+			{
+				_putchar(44);
+				_putchar(' ');
+				_putchar(' ');
+			}
+			else
 			{
 				_putchar(44);
 				_putchar(' ');
 			}
-
-			if ((r * c) < 10)
-				_putchar(' ');
 		}
 		_putchar('\n');
 	}
