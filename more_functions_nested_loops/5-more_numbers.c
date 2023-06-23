@@ -15,12 +15,11 @@ void more_numbers(void)
 		{
 			last_dig = (i % 10);
 			first_dig = (i / 10);
-
+			_putchar(first_dig + '0');
 			if (!last_dig)
 			{
-				_putchar(first_dig + '0');
+				_putchar(last_dig + '0');
 			}
-			_putchar(last_dig + '0');
 		}
 
 		_putchar('\n');
