@@ -11,11 +11,11 @@ void more_numbers(void)
 
 	for (j = 0; j < 11; j++)
 	{
-		last_dig = (i % 10);
-		first_dig = (i / 10);
-
 		for (i = 0; i < 15; i++)
 		{
+			last_dig = (i % 10);
+			first_dig = (i / 10);
+
 			if (!last_dig)
 			{
 				_putchar(first_dig + '0');
