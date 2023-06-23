@@ -7,13 +7,19 @@
  */
 void more_numbers(void)
 {
-	int i, j;
+	int i, j, last_dig, first_dig;
+	last_dig = (i % 10);
+	first_dig = (i / 10);
 
 	for (j = 0; j < 11; j++)
 	{
-		for (i = 0 ; i < 15; i++)
+		for (i = 0; i < 15; i++)
 		{
-			_putchar(i + '0');
+			if (!last_dig)
+			{
+				_putchar(first_dig + '0');
+			}
+			_putchar(last_dig + '0');
 		}
 	}
 	_putchar('\n');
