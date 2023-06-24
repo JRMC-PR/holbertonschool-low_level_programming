@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  *print_line- Execute function
- *
+ *@n: revices an int
  *
  */
 void print_line(int n)
