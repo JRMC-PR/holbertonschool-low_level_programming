@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *
- *
+ *print_triangle- execute the function
+ *@size: honls an int
  *
  */
 void print_triangle(int size)
 {
-	int i, j, k;
+	int i, k;
 
 	for (i = 1; i < size + 1; i++)
 	{
@@ -18,10 +18,10 @@ void print_triangle(int size)
 		k = 0;
 		while(k <= size -i)
 		{
-			_putcha(' ');
+			_putchar(' ');
 			k++;
 		}
 		_putchar(35);
 		_putchar('\n');
-	}
+	}/*end for*/
 } /*end function*/
