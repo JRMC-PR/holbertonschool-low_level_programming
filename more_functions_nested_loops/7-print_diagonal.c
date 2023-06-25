@@ -31,7 +31,7 @@ void print_diagonal(int n)
 						k++;
 					}
 					_putchar('\\');
-					_putcahr('\n');
+					_putchar('\n');
 				}
 			}
 		}
