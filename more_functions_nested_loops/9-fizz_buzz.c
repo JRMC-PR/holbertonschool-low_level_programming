@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i, j, m3, m5;
-	char fb[]="FizzBuzz";
+	char fb[]="FizzBuzz", p;
 
 
 	for (i = 0; i < 101; i++)
@@ -20,7 +20,8 @@ int main(void)
 		{
 			for (j = 0; j < 9; j++)
 			{
-				_putchar(fb[i]);
+				p = fb[i];
+				_putchar(p);
 			}
 			_putchar(' ');
 		}
@@ -28,14 +29,16 @@ int main(void)
 		{
 			for (j = 0; j < 4; j++)
 			{
-				_putchar(fb[i]);
+				p = fb[j];
+				_putchar(p);
 			}
 		}
 		else if (m3 != 0 && m5 == 0)
 		{
 			for (j = 4; j < 9; j++)
 			{
-				_putchar(fb[i]);
+				p = fb[j];
+				_putchar(p);
 			}
 		}
 		else if (i >= 10)
