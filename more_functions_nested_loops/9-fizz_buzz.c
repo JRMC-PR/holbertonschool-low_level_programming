@@ -7,21 +7,20 @@
  */
 int main(void)
 {
+	/*Variable*/
 	int i, j, m3, m5;
 	char fb[]="FizzBuzz", p;
-
 
 	for (i = 0; i < 101; i++)
 	{
 		m3 = i % 3;
 		m5 = i % 5;
-
 		if (m3 == 0 && m5 == 0)
 		{
 			for (j = 0; j < 9; j++)
 			{
 				p = fb[i];
-				_putchar(p);
+				_putchar(p + '0');
 			}
 			_putchar(' ');
 		}
@@ -30,7 +29,7 @@ int main(void)
 			for (j = 0; j < 4; j++)
 			{
 				p = fb[j];
-				_putchar(p);
+				_putchar(p + '0');
 			}
 		}
 		else if (m3 != 0 && m5 == 0)
@@ -38,7 +37,7 @@ int main(void)
 			for (j = 4; j < 9; j++)
 			{
 				p = fb[j];
-				_putchar(p);
+				_putchar(p + '0');
 			}
 		}
 		else if (i >= 10)
