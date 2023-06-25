@@ -20,8 +20,8 @@ void print_square(int size)
 			for (j = 0; j < size; j++)
 			{
 				_putchar(35);
-			}/*end nested for*/
+			} /*end nested for*/
 			_putchar('\n');
-		}/*end outer for*/
-	}
-}/*end function*/
+		} /*end outer for*/
+	} /*end if else*/
+} /*end function*/
