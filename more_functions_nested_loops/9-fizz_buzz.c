@@ -18,7 +18,7 @@ int main(void)
 
 		if (m3 == 0 && m5 == 0)
 		{
-			for (j = 0; j < sizeof(fb[]); j++)
+			for (j = 0; j < sizeof(fb); j++)
 			{
 				_putchar(fb[i]);
 			}
@@ -33,7 +33,7 @@ int main(void)
 		}
 		else if (m3 != 0 && m5 == 0)
 		{
-			for (j = 4; j < sizeof(fb[]); j++)
+			for (j = 4; j < sizeof(fb); j++)
 			{
 				_putchar(fb[i]);
 			}
