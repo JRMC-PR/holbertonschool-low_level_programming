@@ -28,7 +28,7 @@ void print_diagonal(int n)
 					_putchar(' ');
 					k++;
 				} /*end nested  while*/
-			}
+			}/*en if */
 		} /*end  for*/
 	} /*end if else*/
 } /*end function*/
