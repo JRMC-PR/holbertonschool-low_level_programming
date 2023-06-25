@@ -40,7 +40,7 @@ int main(void)
 		}
 		else if (i >= 10)
 		{
-			_putcha((i / 10) + '0');
+			_putchar((i / 10) + '0');
 			_putchar((i % 10) +'0');
 		}
 		else
@@ -49,4 +49,5 @@ int main(void)
 		} /*end if else if */
 	} /*end outer for*/
 	_putchar('\n');
+	return (0);
 } /*end main */
