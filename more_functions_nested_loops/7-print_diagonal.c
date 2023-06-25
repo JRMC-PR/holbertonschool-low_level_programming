@@ -28,10 +28,10 @@ void print_diagonal(int n)
 					while (k < j)
 					{
 						_putchar(' ');
-
 						k++;
 					}
 					_putchar('\\');
+					_putcahr('\n');
 				}
 			}
 		}
