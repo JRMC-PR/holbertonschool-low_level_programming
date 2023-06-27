@@ -3,7 +3,7 @@
 /**
  *_strlen- Execute function
  *@s: holds a char
- *Return: 0 if success
+ *Return: the size of the array
  */
 int _strlen(char *s)
 {
@@ -11,5 +11,5 @@ int _strlen(char *s)
 
 	for (i = 0; s[i] != '\0'; ++i)
 	   ;
-	return (i);	
+	return (i);
 }
