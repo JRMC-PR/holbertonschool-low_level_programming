@@ -15,9 +15,17 @@ void print_rev(char *s)
 	{
 		i++;
 	}
-
 	for (j = i; j >= 0; --j)
 	{
-		_putchar(s[j]);
+		if (s[j] != '\0')
+		{
+			_putchar(s[j]);
+		}
+		else
+		{
+			continue;
+
+		}
 	}
+	_putchar('\n');
 }
