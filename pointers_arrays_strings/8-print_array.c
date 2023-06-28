@@ -2,8 +2,8 @@
 #include "main.h"
 /**
  *print_array- Execute function
- *
- *
+ *@a: a pointer
+ *@n:hold an int
  */
 void print_array(int *a, int n)
 {
