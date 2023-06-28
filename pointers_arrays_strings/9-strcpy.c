@@ -8,7 +8,10 @@
  */
 char *_strcpy(char *dest, char *src)
 {
+	/*Variabes*/
 	int i = 0, j;
+
+	/*Loop sectin */
 	while (src[i])
 	{
 		i++;
@@ -18,4 +21,4 @@ char *_strcpy(char *dest, char *src)
 		dest[j] = src[j];
 	} /*end for*/
 	return (dest);
-}
+} /*End fuction*/
