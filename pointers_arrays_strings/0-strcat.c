@@ -10,11 +10,11 @@ char *_strcat(char *dest, char *src)
 {
 	int size = 0, j;
 
-	while (size < src[size])
+	while (dest[size])
 	{
 		size++;
 	}
-	for (j = 0; j < size - 1  && src[j] != '\0'; j++)
+	for (j = 0; j < size && src[j] != '\0'; j++)
 	dest[size + 1] = src[size];
 
 	dest[size + 1] = '\0';
