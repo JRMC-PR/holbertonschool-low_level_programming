@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *
- *
- *
+ **_strncpy- Execute function
+ *@dest: Points to a cahr
+ *@src: Points to a cahr
+ *@n: recives an int
+ *Return: a pointer to an array
  */
 char *_strncpy(char *dest, char *src, int n)
 {
