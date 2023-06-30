@@ -4,7 +4,7 @@
  *_strcmp- Executes function
  *@s1: points to a char
  *@s2: points to a char
- *Return: -1, 0, 1, respectveliy 
+ *Return: -1, 0, 1, respectveliy
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -19,9 +19,9 @@ int _strcmp(char *s1, char *s2)
 		size2++;
 	/*compare sizes and print arrays*/
 	if (size1 == size2)
-		return (-1);
-	else if (size1 > size2)
 		return (0);
+	else if (size1 > size2)
+		return (-1);
 	else
 		return (1);
 } /*end function scope*/
