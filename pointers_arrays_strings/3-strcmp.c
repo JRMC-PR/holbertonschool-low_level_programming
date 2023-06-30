@@ -21,7 +21,7 @@ int _strcmp(char *s1, char *s2)
 	if (size1 == size2)
 		return (0);
 	else if (size1 > size2)
-		return (-10);
+		return (-13);
 	else
-		return (10);
+		return (13);
 } /*end function scope*/
