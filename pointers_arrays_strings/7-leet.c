@@ -2,17 +2,17 @@
 #include "main.h"
 /**
  **leet- function name
- *@srt: points to a string
+ *@str: points to a string
  *Return: str pointer
  */
-char *leet(char * str)
+char *leet(char *str)
 {
 	/*Variables*/
 	int i = 0, j  = 0, half;
 	char checkers[10] = { 'A', 'a', 'E', 'e', 'o', 'O', 't', 'T', 'l', 'L'};
 	char num[5] = {'4', '3', '0', '7', '1'};
 	/*Loops will handle the movement of the array*/
-	for ( i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
