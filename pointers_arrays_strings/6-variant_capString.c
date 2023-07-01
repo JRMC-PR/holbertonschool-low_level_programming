@@ -20,7 +20,7 @@ char *cap_string(char *str)
 	for (i = 1; i < size; i++) /*off by one */
 	{
 		/*Bool function call inside the if*/
-		if (word_start(str[i], str[i - 1]) == true)
+		if (word_start(&str[i], &str[i - 1]) == true)
 		{
 			/*Validate if the current is not alredy upper*/
 			if (str[i] >= 'A' && str[i] <= 'Z')
