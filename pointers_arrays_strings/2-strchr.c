@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  **_strchr- Executes function
@@ -8,13 +7,12 @@
  */
 char *_strchr(char *s, char c)
 {
-do
-{
-	/*evaluates the valueof s  at a certain position*/
-	if (*s == c)
-	{
-		return (s);
-	}
-}while (*s++);
- return (NULL);
+	do {
+		/*evaluates the valueof s  at a certain position*/
+		if (*s == c)
+		{
+			return (s);
+		}
+	} while (*s++);
+	return (NULL);
 } /*end function*/
