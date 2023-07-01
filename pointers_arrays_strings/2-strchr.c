@@ -8,17 +8,13 @@
  */
 char *_strchr(char *s, char c)
 {
-	/*Variables*/
-	int i = 0;
-	if ( c== '\0')
-		return (0);
-	/*loop handles comparisons*/
-	for (i = 0; s[i]; i++)
+do
+{
+	/*evaluates the valueof s  at a certain position*/
+	if (*s == c)
 	{
-		 if (s[i] == c)
-		{
-			return (&s[i]);
-		}
-	} /*end for*/
-	return (NULL);
+		return (s);
+	}
+}while (*s++);
+ return (NULL);
 } /*end function*/
