@@ -10,6 +10,8 @@ char *_strchr(char *s, char c)
 {
 	/*Variables*/
 	int i = 0;
+	if ( c== '\0')
+		return (0);
 	/*loop handles comparisons*/
 	for (i = 0; s[i]; i++)
 	{
