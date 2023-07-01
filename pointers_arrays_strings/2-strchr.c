@@ -11,7 +11,7 @@ char *_strchr(char *s, char c)
 	/*Variables*/
 	int i = 0;
 	/*loop handles comparisons*/
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i]; i++)
 	{
 		if (s[i] == c)
 		{
