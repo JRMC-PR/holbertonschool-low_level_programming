@@ -13,7 +13,11 @@ char *_strchr(char *s, char c)
 	/*loop handles comparisons*/
 	for (i = 0; s[i]; i++)
 	{
-		if (s[i] == c)
+		if (c == '\0')
+		{
+			return ('\0');
+		}
+		else if (s[i] == c)
 		{
 			return (&s[i]);
 		}
