@@ -8,29 +8,14 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
+	/*Variables*/
 	int i = 0, j = 0, count = 0;
-#include "main.h"
-#include <stdio.h>
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    char str[] = "Look up!\n";
-    char *ptr;
-
-    ptr = string_toupper(str);
-    printf("%s", ptr);
-    printf("%s", str);
-    return (0);
-}
+	/*Loops for moving inside the strings*/
 	for (i = 0; *s; i++, s++)
 	{
 		for (j = 0; accept[j]; j++)
 		{
+			/*Verify equiality*/
 			if (*s == accept[j])
 			{
 				count++;
