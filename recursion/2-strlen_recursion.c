@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *int_strlen_recursion- Executes function
+ *_strlen_recursion- Executes function
  *@s: points to a char
  *Return: recursive function or nul to exit
  */
