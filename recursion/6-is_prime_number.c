@@ -2,9 +2,7 @@
 #include "main.h"
 /**
  *is_prime_number- Excutes function
- *is_div_by-executes helper function
  *@n: holds an int value
- *@div: holds an int
  *Return: true of false
  */
 int is_prime_number(int n)
@@ -17,8 +15,14 @@ int is_prime_number(int n)
 		return ((n == 2) ? 1 : 0);
 	}
 	return (is_div_by(n, div + 1));
-}
-/*Helper function to find prime numbers*/
+} /*End function*/
+
+/**
+ *is_div_by - executes helper function
+ *@n:holds an int
+ *@div: holds an int
+ *Return: recursion or result
+ */
 int is_div_by(int n, int div)
 {
 	if (n % div == 0)
@@ -30,6 +34,6 @@ int is_div_by(int n, int div)
 	return (1);
 	}
 	return (is_div_by(n, div + 1));
-}
+} /*end helper function*/
 
 
