@@ -30,6 +30,7 @@ int _sqrt_helper(int sq, int n)
 	{
 		return (_sqrt_helper(sq + 1, n));
 	}
+	else if (sq * sq > n)
 	{
 		return (-1);
 	}
