@@ -6,7 +6,7 @@
  *@argv: pointer to string pointer array
  *Return: o if succesfull
  */
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
 	/*variables*/
 	int i = 0;
