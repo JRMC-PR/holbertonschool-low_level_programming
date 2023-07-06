@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	/*Variables*/
 	int i = 0, result = 1;
 	/*Check if there is more ths 2 arguments*/
-	if (argc < 2)
+	if (argc <= 1)
 	{
 		printf("Error\n");
 		return (1);
