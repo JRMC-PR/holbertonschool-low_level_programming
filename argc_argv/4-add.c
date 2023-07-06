@@ -16,9 +16,9 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		/*sum the digits*/
-		if (isdigit(*argv[i]) == 1)
+		if (isdigit(*argv[i]))
 		{
-			sum += strtol(argv[i], NULL, 10);
+			sum += atoi(argv[i]);
 			digit_count++;
 		}
 		else /*if not # print error*/
