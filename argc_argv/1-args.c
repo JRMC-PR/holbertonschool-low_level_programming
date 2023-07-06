@@ -8,6 +8,8 @@
  */
 int main(int argc, char *argv[])
 {
+	/*unused agument*/
+	(void)*argv;
 	printf("%d\n", argc);
 	return (0);
-}
+} /*end fucntion*/
