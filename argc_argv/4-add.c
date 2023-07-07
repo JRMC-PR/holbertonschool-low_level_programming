@@ -13,7 +13,12 @@ int main(int argc, char *argv[])
 	/*Variables*/
 	int i = 0, j = 0, sum = 0;
 	char *number;
-	/*check if is a number*/
+	/*check if argc has > 1*/
+	if (argc == 1)
+	{
+		printf("0\n");
+		return (0);
+	}
 	for (i = 1; i < argc; i++)
 	{
 		/*scan the thing pointed to by argv[i]*/
@@ -27,25 +32,9 @@ int main(int argc, char *argv[])
 			}
 		}
 		/*sum the digits*/
-		if (isdigit(*argv[i]))
-		{
-			sum += atoi(argv[i]);
-		}
-		else /*if not # print error*/
-		{
-			printf("Error\n");
-			return (1);
-		} /*end if else*/
-	} /*end for*/
-	/*if no # is found print 0*/
-		if (argc == 1)
-		{
-			printf("0\n");
-			return (0);
-		}
-		else
-		{
-			printf("%d\n", sum);
-		} /*end if else*/
+		sum += atoi(argv[i]);
+	} /*end outer for*/
+	/*print the sum*/
+	printf("%d\n", sum);
 	return (0);
 } /*End main function*/
