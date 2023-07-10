@@ -22,11 +22,12 @@ char *create_array(unsigned int size, char c)
 		/*allocate the space in memmory*/
 		mang = malloc(size * sizeof(*mang));
 		i = 0;
+		/*If malloc fails return NULL*/
 		if (mang == NULL)
 		{
 			return (NULL);
-		}
-
+		}/*end if*/
+		/*fill the array*/
 		while (i < size)
 		{
 			mang[i] = c;
