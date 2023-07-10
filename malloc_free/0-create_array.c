@@ -12,7 +12,7 @@ char *create_array(unsigned int size, char c)
 	/*Variables*/
 	unsigned int i;
 	char *mang;
-/*if no size return NULL*/
+	/*if no size return NULL*/
 	if (size == 0)
 	{
 		return (NULL);
@@ -22,6 +22,11 @@ char *create_array(unsigned int size, char c)
 		/*allocate the space in memmory*/
 		mang = malloc(size * sizeof(*mang));
 		i = 0;
+		if (mang == NULL)
+		{
+			return (NULL);
+		}
+
 		while (i < size)
 		{
 			mang[i] = c;
