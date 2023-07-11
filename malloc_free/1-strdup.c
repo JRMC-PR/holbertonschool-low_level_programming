@@ -25,5 +25,6 @@ char *_strdup(char *str)
 	/*Verify again for content*/
 	if (cpyStr == NULL)
 		return (NULL);
-	return (cpyStr);
+	else
+		return (cpyStr);
 } /*end fucntion*/
