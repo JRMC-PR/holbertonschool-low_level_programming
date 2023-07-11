@@ -22,5 +22,8 @@ char *_strdup(char *str)
 	if (cpyStr == NULL)
 		return (NULL);
 	memcpy(cpyStr, str, strlen(first));
+	/*Verify again for content*/
+	if (cpyStr == NULL)
+		return (NULL);
 	return (cpyStr);
 } /*end fucntion*/
