@@ -11,17 +11,18 @@
 char *_strdup(char *str)
 {
 	/*Variables*/
-	int i =  sizeof(str);
+	int i;
 	char *cpyStr;
 	/*Chek if str = NULL*/
 	if (str == NULL)
 		return (NULL);
+	i =  sizeof(str);
 	/*allocate memory*/
 	cpyStr = malloc(i * sizeof(str));
 	/*if memcopy = NULL */
 	if (cpyStr == NULL)
 		return (NULL);
 	/*Copy the string*/
-	 memcpy(cpyStr, str, i * sizeof(str));
+	memcpy(cpyStr, str, i * sizeof(str));
 	return (cpyStr);
 } /*end fucntion*/
