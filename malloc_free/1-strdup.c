@@ -18,10 +18,10 @@ char *_strdup(char *str)
 		return (NULL);
 	/*allocate memory*/
 	cpyStr = malloc(i * sizeof(str));
-	/*Copy the string*/
-	 memcpy(cpyStr, str, i * sizeof(str));
 	/*if memcopy = NULL */
 	if (cpyStr == NULL)
 		return (NULL);
+	/*Copy the string*/
+	 memcpy(cpyStr, str, i * sizeof(str));
 	return (cpyStr);
 } /*end fucntion*/
