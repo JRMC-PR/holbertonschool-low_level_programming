@@ -11,7 +11,6 @@
 char *_strdup(char *str)
 {
 	/*Variables*/
-	
 	char *cpyStr, *first;
 	/*Chek if str = NULL*/
 	if (str == NULL)
