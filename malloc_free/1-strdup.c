@@ -21,6 +21,8 @@ char *_strdup(char *str)
 	/*if memcopy = NULL */
 	if (cpyStr == NULL)
 		return (NULL);
+	if (strlen(cpyStr) < strlen(first))
+		return (NULL);
 	/*Copy the string*/
 	memcpy(cpyStr, str, strlen(first));
 	return (cpyStr);
