@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <string.h>
+#include <stdlib.h>
 /**
  *free_grid- free allocated memory
  *@grid: pointer to a pointer
