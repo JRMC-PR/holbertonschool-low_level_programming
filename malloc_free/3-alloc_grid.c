@@ -8,7 +8,6 @@
  *@height: holds an int value
  *Return: Null or the pointer to malloc
  */
-		
 int **alloc_grid(int width, int height)
 {
 	/*Variables*/
