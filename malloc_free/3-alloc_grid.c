@@ -20,16 +20,20 @@ int **alloc_grid(int width, int height)
 	grid = malloc(height * sizeof(int *));
 	/*Validate de memory allocation*/
 	if (grid == NULL)
+	{
 		free(grid);
 		return (NULL);
+	}
 	/*allocate space for the colums(width)*/
 	for (i = 0; i < height; i++)
 	{
 		grid[i] = malloc(width * sizeof(int *));
 		/*verify allocation*/
 		if (grid[i] == NULL)
+		{
 			free(grid);
 			return (NULL);
+		}
 	} /*end for*/
 	return (grid);
 } /*end function*/
