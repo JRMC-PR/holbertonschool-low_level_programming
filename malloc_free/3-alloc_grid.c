@@ -8,6 +8,7 @@
  *@height: holds an int value
  *Return: Null or the pointer to malloc
  */
+		
 int **alloc_grid(int width, int height)
 {
 	/*Variables*/
@@ -25,7 +26,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	/*allocate space for the colums(width)*/
-	for (i = 0; i < height; i++)
+	for (i = 0; i < sizeof(grid); i++)
 	{
 		grid[i] = malloc(width * sizeof(int *));
 		/*verify allocation*/
