@@ -17,10 +17,11 @@ char *_strdup(char *str)
 		return (NULL);
 	first = &str[0];
 	/*allocate memory*/
-	cpyStr = malloc(strlen(first));
+	cpyStr = malloc(strlen(first) + 1);
 	/*if memcopy = NULL */
 	if (cpyStr == NULL)
 		return (NULL);
+	/*duplicate str*/
 	memcpy(cpyStr, str, strlen(first));
 	/*Verify again for content*/
 	if (cpyStr == NULL)
