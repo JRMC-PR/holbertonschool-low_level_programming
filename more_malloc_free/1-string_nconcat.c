@@ -19,7 +19,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 	/*compare n to s2*/
-	if (n >= sizeof(s2))
+	if (n >= strlen(s2))
 	{
 		/*allocate acoordingly*/
 		concat = malloc(sizeof(s1) + strlen(s2));
