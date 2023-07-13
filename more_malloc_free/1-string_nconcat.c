@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 	{
 		/*allocate memmory*/
-		concat = malloc(stelen(s1) + n + 1);
+		concat = malloc(strlen(s1) + n + 1);
 	} /*end if else*/
 	/*Validate allocation*/
 	if (concat == NULL)
