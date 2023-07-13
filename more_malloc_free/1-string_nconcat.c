@@ -34,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	/*concat data*/
 	memcpy(concat, s1, strlen(s1));
-	memcpy(concat+sizeof(s1), s2, n);
+	memcpy(concat+strlen(s1), s2, n);
 	/*add nullbyte*/
 	concat[sizeof(concat) + 1] = '\0';
 	return (concat);
