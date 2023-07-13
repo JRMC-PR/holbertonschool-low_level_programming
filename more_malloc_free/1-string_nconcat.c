@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- **string_nconcta- concat 2 * into a new malloc
+ **string_nconcat- concat 2 * into a new malloc
  *@s1: points to a stirng
  *@s2: points to a string
  *@n: holds an unsigned int value
@@ -23,7 +23,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= sizeof(s2))
 	{
 		/*allocate acoordigly*/
-		concat = malloc(sizeof(s1) + sizeof(s2) + 1);
+		concat = malloc(sizeof(s1) + sizeof(s2));
 	}
 	else
 	{
