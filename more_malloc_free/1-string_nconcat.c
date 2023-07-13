@@ -12,7 +12,6 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	/*Variables*/
-	unsigned int i, j;
 	char *concat;
 	/*validate s1 & s2 content*/
 	if (s1 == NULL)
