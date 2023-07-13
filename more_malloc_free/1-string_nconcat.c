@@ -19,23 +19,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 	/*compare n to s2*/
-	if (n >= sizeof(s2))
+	if (n >= strlen(s2))
 	{
 		/*allocate acoordingly*/
-		concat = malloc(sizeof(s1) + sizeof(s2) + 1);
+		concat = malloc(strlen(s1) + strlen(s2) + 1);
 	}
 	else
 	{
 		/*allocate memmory*/
-		concat = malloc(sizeof(s1) + n + 1);
+		concat = malloc(stelen(s1) + n + 1);
 	} /*end if else*/
 	/*Validate allocation*/
 	if (concat == NULL)
 		return (NULL);
 	/*concat data*/
-	memcpy(concat,s1,strlen(s1));
-	memcpy(concat + strlen(s1),s2,n);
+	memcpy(concat, s1, strlen(s1));
+	memcpy(concat + strlen(s1), s2, n);
 	/*add nullbyte*/
-	concat[sizeof(concat) + 1] = '\0';
+	concat[strlen(concat) + 1] = '\0';
 	return (concat);
 } /*end function*/
