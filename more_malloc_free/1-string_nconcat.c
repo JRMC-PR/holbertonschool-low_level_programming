@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*compare n to s2*/
 	if (n >= sizeof(s2))
 	{
-		/*allocate acoordigly*/
+		/*allocate acoordingly*/
 		concat = malloc(sizeof(s1) + sizeof(s2) + 1);
 	}
 	else
@@ -34,10 +34,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (concat == NULL)
 		return (NULL);
 	/*concat data*/
-	for (i = 0; s1[i] != '\0'; i++)
-		concat[i] = s1[i];
-	for (j = 0; j < n; j++)
-		concat[i++] = s2[j];
+	memcpy(concat,s1,sizeof(s1));
+	memcpy(concat + sizeof(s1),s2,n);
 	/*add nullbyte*/
 	concat[sizeof(concat) + 1] = '\0';
 	return (concat);
