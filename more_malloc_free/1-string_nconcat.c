@@ -36,9 +36,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*concat data*/
 	for (i = 0; s1[i] != '\0'; i++)
 		concat[i] = s1[i];
-	for (j = 0; j < n && s2[j] != '\0'; j++)
+	for (j = 0; j < n; j++)
 		concat[i++] = s2[j];
 	/*add nullbyte*/
-	concat[sizeof(concat)] = '\0';
+	concat[sizeof(concat) + 1] = '\0';
 	return (concat);
 } /*end function*/
