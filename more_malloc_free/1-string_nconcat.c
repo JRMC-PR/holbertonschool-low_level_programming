@@ -20,15 +20,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 	/*compare n to s2*/
-	if (n >= sizeof(s2))
+	if (n >= strlen(s2))
 	{
 		/*allocate acoordigly*/
-		concat = malloc(sizeof(s1) + sizeof(s2) + 1);
+		concat = malloc(strlen(s1) + strlen(s2) + 1);
 	}
 	else
 	{
 		/*allocate memmory*/
-		concat = malloc(sizeof(s1) + n + 1);
+		concat = malloc(strlen(s1) + n + 1);
 	} /*end if else*/
 	/*Validate allocation*/
 	if (concat == NULL)
@@ -39,6 +39,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j = 0; j < n; j++)
 		concat[i++] = s2[j];
 	/*add nullbyte*/
-	concat[sizeof(concat) + 1] = '\0';
+	concat[strlen(concat) + 1] = '\0';
 	return (concat);
 } /*end function*/
