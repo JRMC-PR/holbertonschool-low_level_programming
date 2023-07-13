@@ -23,12 +23,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= sizeof(s2))
 	{
 		/*allocate acoordigly*/
-		concat = malloc(sizeof(s1) + sizeof(s2));
+		concat = malloc(sizeof(s1) + sizeof(s2) + 1);
 	}
 	else
 	{
 		/*allocate memmory*/
-		concat = malloc(sizeof(s1) + sizeof(n));
+		concat = malloc(sizeof(s1) + n + 1);
 	} /*end if else*/
 	/*Validate allocation*/
 	if (concat == NULL)
