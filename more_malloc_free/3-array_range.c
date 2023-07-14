@@ -17,7 +17,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 	/*allocation*/
-	pArray = malloc(max * sizeof(int));
+	pArray = malloc((max - min) * sizeof(int));
 	if (pArray == NULL)
 	{
 		free(pArray);
