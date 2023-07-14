@@ -15,13 +15,9 @@ int *array_range(int min, int max)
 	int *pArray;
 	/*Verify max > min*/
 	if (min > max)
-	{
 		return (NULL);
-	}
-	else
-	{
 		/*allocation*/
-		pArray = (int *)malloc(max * sizeof(max));
+		pArray = (int *)malloc(max * sizeof(int *) + 1);
 		if (pArray == NULL)
 		{
 			free(pArray);
@@ -39,6 +35,5 @@ int *array_range(int min, int max)
 				i++;
 			j++;
 		} /*end while*/
-	} /*end if else*/
 	return (pArray);
 } /*end fucntion*/
