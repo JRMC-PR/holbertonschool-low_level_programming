@@ -16,24 +16,24 @@ int *array_range(int min, int max)
 	/*Verify max > min*/
 	if (min > max)
 		return (NULL);
-		/*allocation*/
-		pArray = (int *)malloc(max * sizeof(int *) + 1);
-		if (pArray == NULL)
-		{
-			free(pArray);
-			return (NULL);
-		}
-		/*fill array*/
-		i = min;
-		j = 0;
-		while (i <= max)
-		{
-			pArray[j] = i;
-			if (min < 0)
-				i--;
-			else
-				i++;
-			j++;
-		} /*end while*/
+	/*allocation*/
+	pArray = (int *)malloc(max * sizeof(int *) + 1);
+	if (pArray == NULL)
+	{
+		free(pArray);
+		return (NULL);
+	}
+	/*fill array*/
+	i = min;
+	j = 0;
+	while (i <= max)
+	{
+		pArray[j] = i;
+		if (min < 0)
+			i--;
+		else
+			i++;
+		j++;
+	} /*end while*/
 	return (pArray);
 } /*end fucntion*/
