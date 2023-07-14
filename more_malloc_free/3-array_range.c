@@ -33,7 +33,10 @@ int *array_range(int min, int max)
 		while (i <= max)
 		{
 			pArray[j] = i;
-			i++;
+			if (min < 0)
+				i--;
+			else
+				i++;
 			j++;
 		} /*end while*/
 	} /*end if else*/
