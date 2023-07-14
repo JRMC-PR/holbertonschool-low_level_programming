@@ -17,7 +17,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 	/*allocation*/
-	pArray = malloc(max * sizeof(int));
+	pArray = malloc(max * sizeof(int*));
 	if (pArray == NULL)
 	{
 		free(pArray);
@@ -29,10 +29,7 @@ int *array_range(int min, int max)
 	while (i <= max)
 	{
 		pArray[j] = i;
-		if (min < 0)
-			i--;
-		else
-			i++;
+		i++;
 		j++;
 	} /*end while*/
 	return (pArray);
