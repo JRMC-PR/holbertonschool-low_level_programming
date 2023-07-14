@@ -11,7 +11,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	/*Variables*/
 	unsigned int *p;
-	unsigned int i;
 	/*Veryfi content*/
 	if (nmemb == 0 || size == 0)
 		return (NULL);
