@@ -15,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	/*allocate memory*/
-	p = malloc(nmemb * sizeof(size));
+	p = malloc(nmemb * size);
 	/*Verify allocation*/
 	if (p == NULL)
 	{
@@ -23,6 +23,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	} /*end verification*/
 	/*set memory to 0*/
-	memset(p, 0, nmemb * sizeof(size));
+	memset(p, 0, nmemb * size);
 	return (p);
 } /*end fucntion*/
