@@ -4,8 +4,9 @@
 #include <string.h>
 /**
  **_calloc- allocates space in memmory for a 2D array
- *@nmemb:olas an unInt
- *@size;holds an unInt
+ *@nmemb: olas an unInt
+ *@size: holds an unInt
+ *Return: pointer to malloc
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
