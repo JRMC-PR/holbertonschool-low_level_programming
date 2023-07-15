@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = strlen(s2);
 	}
 		/*allocate acoordingly*/
-		concat = malloc(s1L + n);
+		concat = malloc(s1L + n + 1);
 	/*Validate allocation*/
 	if (concat == NULL)
 		return (NULL);
