@@ -37,6 +37,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j =0; j < n ; j++)
 		concat[i++] = s2[j];
 	/*add nullbyte*/
-	conctar[strlen(concat) + 1] = '\0';
+	concta[strlen(concat) + 1] = '\0';
 	return (concat);
 } /*end function*/
