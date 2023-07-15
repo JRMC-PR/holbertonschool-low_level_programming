@@ -16,11 +16,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *concat;
 	/*validate s1 & s2 content*/
 	if (s1 == NULL)
-		s1 = 0;
+		s1L = 0;
 	else
 		s1L = strlen(s1);
 	if (s2 == NULL)
-		s2 = 0;
+		s2L = 0;
 	else
 		s2L = strlen(s2);
 	/*compare n to s2*/
