@@ -12,29 +12,30 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	/*Variables*/
+	unsigned int s1L, i, j;
 	char *concat;
 	/*validate s1 & s2 content*/
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	/*Get sizes fro s1 & s2*/
+	s1L = sizeof(s1);
 	/*compare n to s2*/
 	if (n >= strlen(s2))
 	{
-		/*allocate acoordingly*/
-		concat = malloc(strlen(s1) + strlen(s2) + 1);
+		n = sizeof(s2);
 	}
-	else
-	{
-		/*allocate memmory*/
-		concat = malloc(strlen(s1) + n + 1);
-	} /*end if else*/
+		/*allocate acoordingly*/
+		concat = malloc(s1L + n + 1);
 	/*Validate allocation*/
 	if (concat == NULL)
 		return (NULL);
 	/*concat data*/
-	memcpy(concat, s1, strlen(s1));
-	memcpy(concat + strlen(s1), s2, n);
+	for (i = 0; s[i] != '\0'; i++)
+		concat[i] = s1[i];
+	for (j =0; j < n ; j++)
+		concat[i++] = s2[j];
 	/*add nullbyte*/
 	return (concat);
 } /*end function*/
