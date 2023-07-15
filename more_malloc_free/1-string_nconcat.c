@@ -20,11 +20,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 	/*Get sizes fro s1 & s2*/
-	s1L = sizeof(s1);
+	s1L = strlen(s1);
 	/*compare n to s2*/
 	if (n >= strlen(s2))
 	{
-		n = sizeof(s2);
+		n = strlen(s2);
 	}
 		/*allocate acoordingly*/
 		concat = malloc(s1L + n);
@@ -37,5 +37,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j =0; j < n ; j++)
 		concat[i++] = s2[j];
 	/*add nullbyte*/
+	conctar[strlen(concat) + 1] = '\0';
 	return (concat);
 } /*end function*/
