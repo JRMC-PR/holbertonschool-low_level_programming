@@ -23,15 +23,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = 0;
 	else
 		s2L = strlen(s2);
-	/*Get sizes fro s1 & s2*/
-	s1L = strlen(s1);
 	/*compare n to s2*/
 	if (n >= strlen(s2))
 	{
 		n = s2L;
 	}
 		/*allocate acoordingly*/
-		concat = malloc((s1L + n + 1) * sizeof(char));
+	concat = malloc((s1L + n + 1) * sizeof(char));
 	/*Validate allocation*/
 	if (concat == NULL)
 	{
