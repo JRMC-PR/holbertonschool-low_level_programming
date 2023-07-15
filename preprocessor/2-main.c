@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  *main- Prints the current file name
- *Return- 0
+ *Return: 0
  */
 int main(void)
 {
