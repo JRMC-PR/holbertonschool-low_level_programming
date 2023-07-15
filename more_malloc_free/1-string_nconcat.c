@@ -12,34 +12,37 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	/*Variables*/
-	unsigned int s1L, i, j;
+	unsigned int s1L, s2L,  i, j;
 	char *concat;
 	/*validate s1 & s2 content*/
 	if (s1 == NULL)
-		s1 = "";
+		s1 = 0;
+	else
+		s1L = strlen(s1);
 	if (s2 == NULL)
-		s2 = "";
+		s2 = 0;
+	else
+		s2L = strlen(s2);
 	/*Get sizes fro s1 & s2*/
 	s1L = strlen(s1);
 	/*compare n to s2*/
 	if (n >= strlen(s2))
 	{
-		n = strlen(s2);
+		n = s2L;
 	}
 		/*allocate acoordingly*/
-		concat = malloc(s1L + n + 1);
+		concat = malloc((s1L + n + 1) * sizeof(char));
 	/*Validate allocation*/
 	if (concat == NULL)
 	{
-		free(concat);
 		return (NULL);
 	}
 	/*concat data*/
 	for (i = 0; i < s1L; i++)
 		concat[i] = s1[i];
 	for (j = 0; j < n ; j++)
-		concat[i++] = s2[j];
+		concat[s1L + j] = s2[j];
 	/*add nullbyte*/
-	concat[strlen(concat) + 1] = '\0';
+	concat[s1L + j] = '\0';
 	return (concat);
 } /*end function*/
