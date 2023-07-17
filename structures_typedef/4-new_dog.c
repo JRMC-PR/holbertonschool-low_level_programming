@@ -6,6 +6,7 @@
  *@name: points to a char
  *@age: holds a float
  *@owner: points to a char
+ *Return: struct pointer
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
