@@ -3,6 +3,7 @@
 /**
  *print_dog - prints all of a struct attribrutes
  *@d: points to a struct of a dog
+ *Return: exit
  */
 void print_dog(struct dog *d)
 {
@@ -23,4 +24,6 @@ void print_dog(struct dog *d)
 		else
 			printf("Owner: %s\n", d->owner);
 	} /*end if*/
+	else
+		return;
 } /*end function*/
