@@ -8,7 +8,7 @@
 void print_name(char *name, void (*f)(char *))
 {
 	/*pass the pointer "name" to the func * */
-	if (name != NULL)
+	if (name != NULL && f != NULL)
 		f(name);
 } /*end function*/
 
