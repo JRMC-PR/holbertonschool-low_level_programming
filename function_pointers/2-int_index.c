@@ -11,7 +11,7 @@
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	/*Variables*/
-	int i, count;
+	int i;
 	/*check size*/
 	if (size <= 0)
 		return (-1);
@@ -25,5 +25,5 @@ int int_index(int *array, int size, int (*cmp)(int))
 				return (i);
 		} /*end for*/
 	} /*end if*/
-	return (0);
+	return (-1);
 } /*end function*/
