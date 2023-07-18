@@ -8,7 +8,7 @@
 void free_dog(dog_t *d)
 {
 	/*free allocated meory*/
-	if (d == NULL)
+	if (d != NULL)
 	{
 		free(d->name);
 		free(d->owner);
