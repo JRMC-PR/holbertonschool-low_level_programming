@@ -21,7 +21,7 @@ int (*get_op_func(char *s))(int, int)
 	/*give value to i for counting*/
 	i = 0;
 	/*Move accross the ops struc*/
-	while (i < 6)
+	while (i < 5)
 	{
 		if (strcmp(s, ops[i].op) == 0)
 		{

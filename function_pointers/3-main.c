@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	/*Variables*/
 	int n1, n2;
-	int (*result)(int,int);
+	int (*result)(int, int);
 	/*Verify argc size*/
 	if (argc != 4)
 	{
@@ -34,5 +34,5 @@ int main(int argc, char *argv[])
 		exit(100);
 	} /*End if*/
 	result = get_op_func(argv[2]);
-	return (printf("%d\n",result(n1, n2)));
+	return (printf("%d\n", result(n1, n2)));
 } /*end function*/
