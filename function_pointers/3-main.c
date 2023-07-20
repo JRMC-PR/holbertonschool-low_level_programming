@@ -34,5 +34,6 @@ int main(int argc, char *argv[])
 		exit(100);
 	} /*End if*/
 	result = get_op_func(argv[2]);
-	return (printf("%d\n", result(n1, n2)));
+	printf("%d\n", result(n1, n2));
+	return (0);
 } /*end function*/
