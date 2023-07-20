@@ -10,7 +10,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	/*Variables*/
 	va_list strings;
 	unsigned int i;
-	char * string2;
+	char *string2;
 	/*start argument search*/
 	va_start(strings, n);
 	for (i = 0; i < n; i++)
