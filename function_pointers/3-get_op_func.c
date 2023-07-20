@@ -1,4 +1,6 @@
 #include "3-calc.h"
+#include <string.h>
+#include <stdio.h>
 /**
  **get_op_func- get the correct function to be executed
  *@s: points to a char
@@ -21,11 +23,11 @@ int (*get_op_func(char *s))(int, int)
 	/*Move accross the ops struc*/
 	while (i < 6)
 	{
-		if (s == ops[i].op)
+		if (strcmp(s, ops[i].op) == 0)
 		{
 			return (ops[i].f);
-				i++;
 		} /*end if*/
+		i++;
 	} /*end while*/
 	return (NULL);
 } /*end function*/
