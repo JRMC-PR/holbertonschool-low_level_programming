@@ -1,4 +1,4 @@
-#include <string.h>
+include <string.h>
 #include <stdio.h>
 #include "lists.h"
 #include <stdlib.h>
@@ -11,7 +11,7 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	/*Variables*/
-	list_t *new_tail = (list_t *)malloc(sizeof(list_t));
+	list_t *new_tail = malloc(sizeof(list_t));
 	list_t *temp;
 	/*chekc str if empty*/
 	if (str == NULL || new_tail == NULL)
@@ -21,16 +21,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_tail->len = strlen(str);
 	new_tail->next = NULL;
 	/*preper for moving with temp*/
+	if (*head == NULL)
+	{
+		*head = new_tail;
+		return (*head);
+	}
 	temp = *head;
-	if (new_tail->str == NULL)
-	{
-		free(new_tail);
-		return (NULL);
-	}
 	while (temp->next != NULL)
-	{
 		temp = temp->next;
-	}
 	temp->next = new_tail;
-	return (new_tail);
+	return (temp);
 } /*end function*/
