@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
+	/*Move on the arrays of vectors*/
 	for (i = 1; i < argc; i++)
 	{
 		/*scan the thing pointed to by argv[i]*/
@@ -30,7 +31,7 @@ int main(int argc, char *argv[])
 				printf("Error\n");
 				return (1);
 			}
-		}
+		} /*end inner for*/
 		/*sum the digits*/
 		sum += atoi(argv[i]);
 	} /*end outer for*/

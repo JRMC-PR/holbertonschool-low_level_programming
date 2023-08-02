@@ -23,8 +23,9 @@ void print_triangle(int size)
 				_putchar(' ');
 				k++;
 			}
+			while(
 			_putchar(35);
 			_putchar('\n');
 		}
-	}/*end for*/
+	}/*end if else*/
 } /*end function*/

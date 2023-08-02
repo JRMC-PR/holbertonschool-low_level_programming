@@ -19,6 +19,6 @@ char *_strstr(char *haystack, char *needle)
 	} while(*needle != '\0' && *haystack != '\0');
 	if (count == 0)
 		return (0);
-return (0);
+	return (0);
 } /*end function*/
 

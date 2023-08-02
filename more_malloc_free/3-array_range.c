@@ -33,4 +33,4 @@ int *array_range(int min, int max)
 		j++;
 	} /*end while*/
 	return (pArray);
-} /*end fucntion*/
+} /*end fucntion*

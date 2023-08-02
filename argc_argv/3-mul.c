@@ -5,7 +5,7 @@
  *main- eecutes main function
  *@argc: holds element count
  *@argv: point to a pointer string
- *Return: 0 if successfull
+ *Return: 0 if successfull, 1 if not enought values
  */
 int main(int argc, char *argv[])
 {
@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
+		/*Mult every element*/
 		for (i = 1; i < argc; i++)
 		{
 			result *= strtol(argv[i], NULL, 10);

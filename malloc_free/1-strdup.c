@@ -18,7 +18,7 @@ char *_strdup(char *str)
 	first = &str[0];
 	/*allocate memory*/
 	cpyStr = malloc(strlen(first) + 1);
-	/*if memcopy = NULL */
+	/*if malloc failed = NULL */
 	if (cpyStr == NULL)
 		return (NULL);
 	/*duplicate str*/
