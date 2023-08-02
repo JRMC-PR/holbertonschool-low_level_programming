@@ -16,11 +16,12 @@ void free_list(list_t *head)
 		free(head);
 		return;
 	}
-	while (temp->next != NULL)
+	while (head->next != NULL)
 	{
 		head = head->next;
 		free(temp);
 		temp = head;
 	}
+	head = head->next;
 	free(head);
 } /*end function*/
