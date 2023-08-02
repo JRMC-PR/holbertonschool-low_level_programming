@@ -2,18 +2,20 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- *print_list - prints all the nodes of a linked list 
+ *list_len - prints all the nodes of a linked list
  *@h: points to the link struct
  *Return: the number of nodes
  */
 size_t list_len(const list_t *h)
 {
+	/*Variables*/
 	size_t count = 0;
+
 	while (h != NULL) /*Check if str !NULL*/
 	{
 		if (h->str != NULL)
 		{
-			count++; /*print count*/
+			count++; /*sum 1 to count*/
 		}
 		h = h->next; /*Move to next argument*/
 	} /*end while*/
