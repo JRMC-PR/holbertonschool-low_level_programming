@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
- *free-list - a fucntion that frees a list
+ *free_list - a fucntion that frees a list
  *@head: pointer to the start of a list
  */
 void free_list(list_t *head)
@@ -11,6 +11,11 @@ void free_list(list_t *head)
 	/*set temp to head*/
 	temp = head;
 	/*Move head, delete temp, set temp tp head*/
+	if (head == NULL)
+	{
+		free(head);
+		return;
+	}
 	while (head->next != NULL)
 	{
 		head = head->next;
