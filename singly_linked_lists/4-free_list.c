@@ -19,7 +19,6 @@ void free_list(list_t *head)
 	temp = head;
 	while (head->next != NULL)
 	{
-		printf("I AM HERE BRO\n");
 		head = head->next;
 		free(temp);
 		temp = head;
