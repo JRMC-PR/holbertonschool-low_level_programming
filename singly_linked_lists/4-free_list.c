@@ -12,7 +12,6 @@ void free_list(list_t *head)
 	/*Move head, delete temp, set temp tp head*/
 	if (head == NULL)
 	{
-		free(head);
 		return;
 	}
 	/*set temp to head*/
@@ -20,12 +19,12 @@ void free_list(list_t *head)
 	while (head->next != NULL)
 	{
 		head = head->next;
-		temp->str = NULL;
-		temp->next = NULL;
+		free(temp->str);
 		free(temp);
 		temp = head;
 	}
 	head = head->next;
+	free(temp->str);
 	free(head);
 	free(temp);
 } /*end function*/
