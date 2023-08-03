@@ -8,7 +8,7 @@
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	/*Declarations*/
-	dlistint_t *new_head = malloc(sizeof(dlistint_t));
+	dlistint_t *new_head = (dlistint_t *)malloc(sizeof(dlistint_t));
 	/*veryfy is allocarion failde*/
 	if (new_head == NULL)
 		return (NULL);
