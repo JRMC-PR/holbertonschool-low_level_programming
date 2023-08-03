@@ -8,14 +8,14 @@ void free_list(list_t *head)
 {
 	/*Declaraations*/
 	list_t *temp;
-	/*set temp to head*/
-	temp = head;
 	/*Move head, delete temp, set temp tp head*/
 	if (head == NULL)
 	{
 		free(head);
 		return;
 	}
+	/*set temp to head*/
+	temp = head;
 	while (head->next != NULL)
 	{
 		head = head->next;
@@ -24,5 +24,4 @@ void free_list(list_t *head)
 	}
 	head = head->next;
 	free(head);
-	free(temp);
 } /*end function*/
