@@ -3,6 +3,7 @@
  *add_dnodeint_end - adds a new node @ the end
  *@head: a ponter to a poiter that points toa list
  *@n: data to be stored
+ *Return: new node address of null if failed
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
@@ -28,5 +29,5 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	} /*end while*/
 	new_tail->prev = temp;
 	temp->next = new_tail;
-	return(temp);
+	return (temp);
 } /*end function*/
