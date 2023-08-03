@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  *dlistint_len - retunr the lenght of the dlist
- *@h - points to the first node of the list
+ *@h: points to the first node of the list
  *Return: the size of the list
  */
 size_t dlistint_len(const dlistint_t *h)
