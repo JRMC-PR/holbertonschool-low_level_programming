@@ -12,10 +12,14 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	/*veryfy is allocarion failde*/
 	if (new_head == NULL)
 		return (NULL);
+	if (*head == NULL)
+	{
+		new_head->next == NULL;
+	}
 	/*create a new node*/
 	new_head->n = n;
 	new_head->next = *head;
 	new_head->prev = NULL;
 	*head = new_head;
 	return (new_head);
-} /*end fucntion*/
+ /*end fucntion*/
