@@ -19,7 +19,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		temp = temp->next;
 		node_count++;
 	} /*end while*/
-	if (node_count != index);
-	return (NULL);
+	if (node_count != index)
+		return (NULL);
 	return (temp);
 } /*end function*/
