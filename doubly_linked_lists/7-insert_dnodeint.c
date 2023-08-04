@@ -15,7 +15,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (new_node == NULL)
 		return (NULL);
 	/*check if head is NULL*/
-	if (*h == NULL && idx > 0)
+	if (*h == NULL)
 		return (NULL);
 	new_node->n = n; /*set n value*/
 	/*start moving to find the location*/
