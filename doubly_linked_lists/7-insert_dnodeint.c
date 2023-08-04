@@ -25,15 +25,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_node->n = n; /*set n value*/
 	/*start moving to find the location*/
 	temp = *h;
-	while (temp != NULL && count != idx - 1)
+	while (temp != NULL && count != idx)
 	{
 		temp = temp->next;
 		count++;
 	} /*end while*/
 	if (temp == NULL)
 		return (NULL);
-	new_node->prev = temp->prev; /*point to prev*/
-	new_node->next = temp->next; /*point to next*/
-	temp->next = new_node;
+	temp->prev->next = new_node; /*prev node nex point to new node*/
+	new_node->next = temp; /*new point to temp*/
+	new_node->prev = temp->prev;
+	temp->prev = new_node;
 	return (new_node);
 } /*end function*/
