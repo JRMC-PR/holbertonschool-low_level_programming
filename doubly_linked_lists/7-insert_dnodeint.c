@@ -4,6 +4,7 @@
  *@h: a pointer to a pointer that points to a list
  *@idx: where new node should be
  *@n: data to be stored
+ *Return: add of node or NULL
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -16,7 +17,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	/*check if head is NULL*/
 	if (*h == NULL)
-		return (NULL);
+	{
+		*head = new_node;
+		return (new_node);
+	}
 	new_node->n = n; /*set n value*/
 	/*start moving to find the location*/
 	temp = *h;
