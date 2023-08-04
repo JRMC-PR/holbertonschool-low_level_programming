@@ -30,8 +30,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		temp = temp->next;
 		count++;
 	} /*end while*/
+
 	temp->prev->next = temp->next;/*set the prev node to look next to*/
-	if(temp->next != NULL)
+	if (temp->next != NULL)
 		temp->next->prev = temp->prev;/*set next node prev to */
 	free(temp);
 	return (1);
