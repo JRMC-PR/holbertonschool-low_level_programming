@@ -8,7 +8,7 @@
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	/*Declarations*/
-	size_t node_count = 0 ;
+	size_t node_count = 0;
 	dlistint_t *temp;
 	/*Check if head is NULL*/
 	if (head == NULL)
@@ -19,5 +19,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		temp = temp->next;
 		node_count++;
 	} /*end while*/
+	if (node_count != index);
+	return (NULL);
 	return (temp);
 } /*end function*/
