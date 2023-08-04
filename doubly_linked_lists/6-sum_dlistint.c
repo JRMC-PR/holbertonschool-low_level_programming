@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *sum_dlisint - sums the data of a int list
+ *sum_dlistint - sums the data of a int list
  *@head: points to a list
  *Return: sum or null if failed
  */
