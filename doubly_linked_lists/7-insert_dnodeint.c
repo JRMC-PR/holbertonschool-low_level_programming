@@ -15,6 +15,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	/*verify the new malloc*/
 	if (new_node == NULL)
 		return (NULL);
+	temp = *h;
+	/*special case 0*/
+	if (idx == 0)
+	{
+		*h = temp->next; /*Move head over*/
+		if (*h != NULL)
+			(*h)->prev = NULL;/*set to null if head is empty*/
+		return (temp);
+	}
 	/*check if head is NULL*/
 	if (*h == NULL)
 	{
@@ -24,7 +33,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	new_node->n = n; /*set n value*/
 	/*start moving to find the location*/
-	temp = *h;
 	while (temp != NULL && count != idx)
 	{
 		temp = temp->next;
