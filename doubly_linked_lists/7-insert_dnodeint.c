@@ -8,44 +8,38 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	/*Declarations*/
+	dlistint_t *new_node, *prev_node, *tmp = *h;
 	unsigned int count = 0;
-	dlistint_t *new_node = (dlistint_t *)malloc(sizeof(dlistint_t));
-	dlistint_t *temp;
-	/*verify the new malloc*/
-	if (new_node == NULL)
+
+	if (!h)
 		return (NULL);
-	temp = *h;
-	/*check if head is NULL*/
-	if (*h == NULL)
-	{
-		*h = new_node;
-		(*h)->n = n;
-		return (new_node);
-	}
-	/*if idx is 0*/
+	while (tmp)
+		tmp = tmp->next, count++;
+	if (idx > count)
+		return (NULL);
+	new_node = malloc(sizeof(dlistint_t));
+	if (!new_node)
+		return (NULL);
+	new_node->n = n;
 	if (idx == 0)
 	{
-		new_node->n = n;
 		new_node->prev = NULL;
 		new_node->next = *h;
-		if (*h != NULL)
+		if (*h)
 			(*h)->prev = new_node;
 		*h = new_node;
 		return (new_node);
 	}
-	new_node->n = n; /*set n value*/
-	/*start moving to find the location*/
-	while (temp != NULL && count != idx)
+	tmp = *h;
+	for (count = 0; count < idx; count++)
 	{
-		temp = temp->next;
-		count++;
-	} /*end while*/
-	if (temp == NULL)
-		return (NULL);
-	temp->prev->next = new_node; /*prev node nex point to new node*/
-	new_node->next = temp; /*new point to temp*/
-	new_node->prev = temp->prev;
-	temp->prev = new_node;
+		prev_node = tmp;
+		tmp = tmp->next;
+	}
+	new_node->next = tmp;
+	new_node->prev = prev_node;
+	prev_node->next = new_node;
+	if (tmp)
+		tmp->prev = new_node;
 	return (new_node);
 } /*end function*/
