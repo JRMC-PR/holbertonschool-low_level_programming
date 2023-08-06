@@ -14,14 +14,19 @@ int main(void)
 		/*check for fizz buzz*/
 		if (i % 15 == 0)
 			printf("FizzBuzz ");
-		else if(i % 5 == 0)
-			printf("Buzz ");
+		else if (i % 5 == 0)
+		{
+			if (i == 100)
+				printf("Buzz");
+			else
+				printf("Buzz ");
+		}
 		else if (i % 3 == 0)
 			printf("Fizz ");
 		else if (i < 10)
 			printf("%d ", i);
 		else
-			printf("%d%d ", i / 10, i % 10 );
+			printf("%d%d ", i / 10, i % 10);
 		i++;
 	} /*end 1->100 while*/
 	printf("\n");
