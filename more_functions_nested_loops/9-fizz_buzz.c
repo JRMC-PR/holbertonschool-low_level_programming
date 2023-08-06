@@ -1,55 +1,29 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 /**
- *main- Execute code
- *Return: 0 of success
- *
+ *main - fizz buzz excercise
+ *Return: if success
  */
 int main(void)
 {
-	/*Variable*/
-	int i, j, m3, m5;
-	char fb[]="FizzBuzz", p;
-
-	for (i = 0; i < 101; i++)
+	/*Declarations*/
+	int i = 1;
+	/*start a loop for counting to 100*/
+	while (i <= 100)
 	{
-		m3 = i % 3;
-		m5 = i % 5;
-		if (m3 == 0 && m5 == 0)
-		{
-			for (j = 0; j < 9; j++)
-			{
-				p = fb[i];
-				_putchar(p + '0');
-			}
-			_putchar(' ');
-		}
-		else if (m3 == 0 && m5 != 0)
-		{
-			for (j = 0; j < 4; j++)
-			{
-				p = fb[j];
-				_putchar(p + '0');
-			}
-		}
-		else if (m3 != 0 && m5 == 0)
-		{
-			for (j = 4; j < 9; j++)
-			{
-				p = fb[j];
-				_putchar(p + '0');
-			}
-		}
-		else if (i >= 10)
-		{
-			_putchar((i / 10) + '0');
-			_putchar((i % 10) +'0');
-		}
+		/*check for fizz buzz*/
+		if (i % 15 == 0)
+			printf("FizzBuzz ");
+		else if(i % 5 == 0)
+			printf("Buzz ");
+		else if (i % 3 == 0)
+			printf("Fizz ");
+		else if (i < 10)
+			printf("%d ", i);
 		else
-		{
-			_putchar(i);
-		} /*end if else if */
-	} /*end outer for*/
-	_putchar('\n');
+			printf("%d%d ", i / 10, i % 10 );
+		i++;
+	} /*end 1->100 while*/
+	printf("\n");
 	return (0);
-} /*end main */
+} /*end void*/
