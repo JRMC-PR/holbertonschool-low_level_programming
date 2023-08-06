@@ -2,26 +2,23 @@
 #include "main.h"
 /*
  *more_numbers- Execute function
- *
- *
  */
 void more_numbers(void)
 {
-	int i, j, last_dig, first_dig;
+	int i = 0, j = 0;
 
 	for (j = 0; j < 11; j++)
 	{
 		for (i = 0; i < 15; i++)
 		{
-			last_dig = (i % 10);
-			first_dig = (i / 10);
-			_putchar(first_dig + '0');
-			if (last_dig)
+			if (i > 9)
 			{
-				_putchar(last_dig + '0');
+				_putchar((i / 10) + '0');
+				_putchar((i % 10) + '0');
 			}
-		}
-
+			else
+				_putchar(i + '0');
+		} /*end inner for*/
 		_putchar('\n');
-	}
-}
+	} /*end outter for*/
+} /*end function*/
