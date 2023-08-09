@@ -8,7 +8,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	/*Declarations*/
-	int fd, text_size, len;
+	int fd, len;
 
 	/*gET SIZE OF TEXT_CONTENT*/
 	/*allocate ner space*/
