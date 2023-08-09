@@ -11,20 +11,22 @@ int create_file(const char *filename, char *text_content)
 	int fd, text_size;
 
 	/*gET SIZE OF TEXT_CONTENT*/
-	text_size = strlen(text_content);
 	/*allocate ner space*/
 	/*check if malloc failed and the file name*/
 	if (filename == NULL)
 		return (-1);
 	/*open new file*/
-	fd = open(filename, O_CREAT, 0600);
+	fd = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0600);
 	/*Verify if text_content NULL*/
-	if (!text_content)
-	{
-		close(fd);
-		return (1);
-	} /*end if*/
+	if (fd == -1)
+		return (-1);
+	
 	/*write to the file*/
-	write(STDOUT_FILENO, text_content, text_size);
+	if (text_content != NULL)
+	{
+		len = strlen(text_content);
+		write(fd, text_content, len);
+		close(fd);
+	}
 	return (1);
 } /*end function*/
