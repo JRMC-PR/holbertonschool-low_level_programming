@@ -12,9 +12,10 @@ int create_file(const char *filename, char *text_content)
 	char *buf;
 
 	/*gET SIZE OF TEXT_CONTENT*/
-	text_size = sizeof(text_content);
+	text_size = strlen(text_content);
 	/*allocate ner space*/
 	buf = malloc(sizeof(char) * text_size);
+	buf[text_size + 1] = '\0';
 	/*check if malloc failed and the file name*/
 	if (buf == NULL || filename == NULL)
 		return (-1);
@@ -24,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 	{
 		close(fd);
-		return (0);
+		return (-1);
 	} /*end if*/
 	/*write to the file*/
 	write(STDOUT_FILENO, buf, sizeof(text_content));
