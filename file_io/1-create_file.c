@@ -9,14 +9,12 @@ int create_file(const char *filename, char *text_content)
 {
 	/*Declarations*/
 	int fd, text_size;
-	char *buf;
 
 	/*gET SIZE OF TEXT_CONTENT*/
 	text_size = strlen(text_content);
 	/*allocate ner space*/
-	buf = malloc(sizeof(char) * text_size);
 	/*check if malloc failed and the file name*/
-	if (buf == NULL || filename == NULL)
+	if (filename == NULL)
 		return (-1);
 	/*open new file*/
 	fd = open(filename, O_CREAT, 0600);
@@ -27,6 +25,6 @@ int create_file(const char *filename, char *text_content)
 		return (1);
 	} /*end if*/
 	/*write to the file*/
-	write(STDOUT_FILENO, buf, text_size);
+	write(STDOUT_FILENO, text_content, text_size);
 	return (1);
 } /*end function*/
