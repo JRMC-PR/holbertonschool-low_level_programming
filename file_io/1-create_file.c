@@ -28,6 +28,7 @@ int create_file(const char *filename, char *text_content)
 		return (1);
 	} /*end if*/
 	/*write to the file*/
+	strcpy(buf, text_content);
 	write(STDOUT_FILENO, buf, text_size);
 	return (1);
 } /*end function*/
