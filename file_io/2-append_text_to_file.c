@@ -8,7 +8,7 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	/*Declarations*/
-	int fd, len = strlen(text_content);
+	int fd, len;
 	/*Check if the file exists*/
 	if (access(filename, F_OK) == -1)
 		return (-1);
@@ -24,7 +24,8 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		close(fd); /*if NULL, jsut close the file*/
 		return (1);
-	}
+	} /*end if*/
+	len = strlen(text_content);
 	write(fd, text_content, len);
 	close(fd);
 	return (1);
