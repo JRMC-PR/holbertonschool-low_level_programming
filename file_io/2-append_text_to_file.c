@@ -3,6 +3,7 @@
  *append_text_to_file - append text to a file
  *@filename: points to the file name
  *@text_content: points to the txt content
+ *Return: ! if success -1 if fail
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
