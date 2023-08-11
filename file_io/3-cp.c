@@ -1,26 +1,5 @@
 #include "main.h"
 /**
- *main - text cp function
- *@arg: argument count
- *@argv: argument vector
- *Return: 0
- */
-int main(int arg, char *argv[])
-{
-	/*Declaration*/
-	char *from;
-	char *to;
-	/*chekc for corret argument count*/
-	if (arg != 3)
-	{   dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-	to = argv[1];
-	from = argv[2];
-	cp(to, from);
-	return 0;
-}
-/**
  *cp - copy the ontents of one file to the next
  *@file_from: where to copy from
  *@file_to: where to copy to
@@ -61,4 +40,25 @@ void cp(char *file_from, char *file_to)
 		dprintf(STDOUT_FILENO, "Error: Can't close fd %i\n", fd2);
 		exit(100);
 	} /*end close if*/
-} /*end function*/
+} /*end function*//**
+ *main - text cp function
+ *@arg: argument count
+ *@argv: argument vector
+ *Return: 0
+ */
+int main(int arg, char *argv[])
+{
+	/*Declaration*/
+	char *from;
+	char *to;
+	/*chekc for corret argument count*/
+	if (arg != 3)
+	{   dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	to = argv[1];
+	from = argv[2];
+	cp(to, from);
+	return 0;
+}
+
