@@ -1,64 +1,64 @@
 #include "main.h"
 /**
- *cp - copy the ontents of one file to the next
- *@file_from: where to copy from
- *@file_to: where to copy to
+ * main - main function
+ * @argc: count of arguments
+ * @argv: array of arguments
+ * Return: number
  */
-void cp(char *file_from, char *file_to)
+
+int main(int argc, char *argv[])
 {
-	/*Declarations*/
-	int fd1, fd2, n;
-	char *buf = malloc(1024);
-	/*check for correct argument count*/
-	if (file_from == NULL || file_to == NULL)
+	int fd_from, fd_to, count_r, count_w;
+	char *file_f = argv[1];
+	char *file_t = argv[2];
+	char *buff[1024];
+
+	if (argc != 3)
+		error_and_exit("cp file_from file_to", NULL, 97);
+
+	fd_from = open(file_f, O_RDONLY);
+	if (fd_from == -1 || file_f == NULL)
+		error_and_exit("Can't read from file", file_f, 98);
+
+	fd_to = open(file_t, O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	if (fd_to == -1 || file_t == NULL)
+		error_and_exit("Can't write to", file_t, 99);
+
+	while (1)
 	{
-		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	} /*end check if*/
-	/*check if file existis || if file is readable */
-	if (access(file_from, F_OK) == -1 || access(file_from, R_OK) == -1)
-	{
-		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", file_from);
-		exit(98);
-	} /*end second check if*/
-	fd1 = open(file_from, O_RDONLY); /*open soruce file*/
-	n = read(fd1, buf, 1024); /*read from file*/
-	/*create file_to*/
-	if (access(file_to, F_OK) == 0)
-		fd2 = open(file_to, O_TRUNC | O_WRONLY);
-	else
-		fd2 = open(file_to, O_CREAT | O_TRUNC | O_WRONLY , 0664);
-	/*now write to the new file*/
-	if (write(fd2, buf, n) != n)
-	{
-		dprintf(STDOUT_FILENO, "Error: Writing to file %s failed\n", file_to);
-		exit(99);
-	} /*write and check if success*/
-	close(fd1);
-	if(close(fd2) == -1)
-	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %i\n", fd2);
-		exit(100);
-	} /*end close if*/
-} /*end function*//**
- *main - text cp function
- *@arg: argument count
- *@argv: argument vector
- *Return: 0
- */
-int main(int arg, char *argv[])
-{
-	/*Declaration*/
-	char *from;
-	char *to;
-	/*chekc for corret argument count*/
-	if (arg != 3)
-	{   dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
+		count_r = read(fd_from, buff, 1024);
+		if (count_r == 0)
+			break;
+		if (count_r == -1)
+			error_and_exit("Can't read from file", file_f, 98);
+		count_w = write(fd_to, buff, count_r);
+		if (count_w == -1)
+			error_and_exit("Can't write to", file_t, 99);
 	}
-	to = argv[1];
-	from = argv[2];
-	cp(to, from);
-	return 0;
+	if (close(fd_from) == -1)
+		error_and_exit("Can't close fd", file_f, 100);
+	if (close(fd_to) == -1)
+		error_and_exit("Can't close fd", file_t, 100);
+	return (0);
 }
 
+/**
+ * error_and_exit - function to help with errors
+ * @message: message to add
+ * @filename: filename
+ * @exit_code: exit code of the error
+ */
+
+void error_and_exit(const char *message, const char *filename, int exit_code)
+{
+	if (filename == NULL)
+	{
+		dprintf(STDERR_FILENO, "Usage: %s\n", message);
+		exit(exit_code);
+	}
+	else
+	{
+		dprintf(STDERR_FILENO, "Error: %s %s\n", message, filename);
+		exit(exit_code);
+	}
+}
