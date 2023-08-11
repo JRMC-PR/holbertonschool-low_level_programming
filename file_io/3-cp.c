@@ -3,7 +3,7 @@
  *main - text cp function
  *Return: 0
  */
-int main(void) {
+int main() {
     char *source_file = "incitatous";
     char *target_file = "Incitatous";
 
