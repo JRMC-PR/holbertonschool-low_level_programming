@@ -1,0 +1,32 @@
+#include "search_algos.h"
+/**
+ *linear_search - preform a linear search
+ *@array: pointer to the array
+ *@size: size of the array
+ *@value: data to be compared
+ *Return: index value whre data is found
+ */
+int linear_search(int *array, size_t size, int value)
+{
+	/*declarations*/
+	unsigned long int i = 0;
+	
+	/*Verifying Input Data*/
+	if (array == NULL)
+		return (-1);
+	/*Move in the array*/
+	for (i = 0; i < size; i++)
+	{
+		if (array[i] != value)
+		{
+			printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+			continue;
+		}
+		else
+		{
+			printf("Found [%d} at index: [%ld]", value, i);
+			return (i);
+		} /*end if else*/
+	} /*end search for*/
+	return (-1);
+} /*end linear search*/
