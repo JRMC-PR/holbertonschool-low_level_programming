@@ -24,7 +24,6 @@ int linear_search(int *array, size_t size, int value)
 		}
 		else
 		{
-			printf("Found [%d} at index: [%ld]", value, i);
 			return (i);
 		} /*end if else*/
 	} /*end search for*/
