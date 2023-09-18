@@ -10,7 +10,6 @@ int linear_search(int *array, size_t size, int value)
 {
 	/*declarations*/
 	unsigned long int i = 0;
-	
 	/*Verifying Input Data*/
 	if (array == NULL)
 		return (-1);
