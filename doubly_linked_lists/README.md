@@ -17,4 +17,4 @@ This directory contains C programs that use doubly linked lists.
 
 ## Usage
 
-To use these functions in your own program, include the `main.h` header file and compile your program with the corresponding `.c` files.
+To use these functions in your own program, include the `lists.h` header file and compile your program with the corresponding `.c` files.
